@@ -62,29 +62,19 @@
 	let filterValue = $state<"all" | "completed" | "not completed">("all");
 </script>
 
-<div class="app-container">
-	<dev class="controls">
-		<Input {addTask} />
-		<Filter bind:value={filterValue} />
-	</dev>
-	<List
-		bind:tasks
-		{editInput}
-		{deleteTask}
-		{toggleTaskCompletion}
-		{filterTasks}
-	/>
-</div>
+<dev class="controls">
+	<Input {addTask} />
+	<Filter bind:value={filterValue} />
+</dev>
+<List
+	bind:tasks
+	{editInput}
+	{deleteTask}
+	{toggleTaskCompletion}
+	{filterTasks}
+/>
 
 <style>
-	.app-container {
-		position: relative;
-		width: 60vw;
-		top: 5rem;
-		padding: 1rem;
-		font-family: Arial, sans-serif;
-	}
-
 	.controls {
 		max-width: 500px;
 		display: flex;
@@ -94,10 +84,6 @@
 	}
 
 	@media (max-width: 600px) {
-		.app-container {
-			width: 90vw;
-			top: 2rem;
-		}
 		.controls {
 			max-width: 90vw;
 			flex-direction: column-reverse;
