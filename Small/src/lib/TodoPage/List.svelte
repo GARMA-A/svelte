@@ -26,6 +26,7 @@
 						data-index={i}
 					/>
 					<input
+						type="text"
 						class={task.completed
 							? "completed"
 							: ""}
@@ -66,8 +67,15 @@
 	.task-info {
 		display: flex;
 		align-items: center;
+		width: 100%;
 
 		gap: 0.5rem;
+
+		input[type="text"] {
+			font-size: 1rem;
+			width: 100%;
+			height: max-content;
+		}
 	}
 	input {
 		border: none;
